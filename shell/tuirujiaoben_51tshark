@@ -1,0 +1,11 @@
+#! /bin/bash
+a="----this is a push shell-----"
+echo $a;
+
+adb root
+adb remount
+adb push ~/workspace/sprdroid5.1_tshark_phase2_15b/out/target/product/scx35_sp7731gea_hd/system/lib/libstagefright.so /system/lib/libstagefright.so
+#adb push ./lib64/libstagefright.so /system/lib64/libstagefright.so
+adb push ~/workspace/sprdroid5.1_tshark_phase2_15b/out/target/product/scx35_sp7731gea_hd/system/lib/libmediaplayerservice.so /system/lib/libmediaplayerservice.so
+adb reboot
+echo "-----------push done----------"

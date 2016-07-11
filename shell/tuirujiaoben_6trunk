@@ -1,0 +1,12 @@
+#! /bin/bash
+a="----this is a push shell-----"
+echo $a;
+
+adb root
+adb remount
+adb push ~/workspace/sprdroid6.0_trunk/out/target/product/sp7731g_1h10/system/lib/libstagefright.so /system/lib/libstagefright.so
+#adb push ./lib64/libstagefright.so /system/lib64/libstagefright.so
+adb push ~/workspace/sprdroid6.0_trunk/out/target/product/sp7731g_1h10/system/lib/libmediaplayerservice.so /system/lib/libmediaplayerservice.so
+adb push ~/workspace/sprdroid6.0_trunk/out/target/product/sp7731g_1h10/system/lib/libstagefright_httplive.so /system/lib/libstagefright_httplive.so
+adb reboot
+echo "-----------push done----------"
