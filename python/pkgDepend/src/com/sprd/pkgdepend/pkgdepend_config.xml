@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <module name = "PKG1">
+        <item name = "Gallery2" srcpath = "packages/apps/Gallery2/">
+		<product_path>system/app/Gallery2/Gallery2.apk</product_path>
+	</item>		
+    </module>
+
+    <module name = "PKG2">
+	<item name = "frameworks_base" srcpath = "frameworks/base">
+		<product_path>system/framework/framework.jar</product_path>
+	</item>
+    </module>
+</config>

@@ -1,0 +1,7 @@
+ python pkgDepend.py -p /home/user/workspace/sprdroid6.0_trunk/ -pn sp7731g_1h10  -xls pkgdependcy.xls -xml pkgdependcy.xml -gxls gitdependcy.xls -gxml gitdependcy.xml
+    -p android root path
+    -xls 将pkg依赖结果生成到pkgdependcy.xls该文件中
+    -xml 将pkg依赖结果生成到 pkgdependcy.xml文件中
+    -gxls 将git依赖结果生成到gitdependcy.xls 文件中
+    -gxml 将git依赖结果生成到gitdependcy.xml中
+    -pn sp7731g_1h10  ，表示产品名字---out/target/product/sp7731g_1h10
