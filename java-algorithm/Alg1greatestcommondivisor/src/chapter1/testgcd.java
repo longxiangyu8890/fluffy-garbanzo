@@ -1,6 +1,9 @@
 package chapter1;
 
 public class testgcd {
+	/*定理：gcd(a, b) = g(b, a%b) 不妨设a > b,直到 a%b为0
+	 * 不用担心p < q,因为经过 5 % 10 = 5，这样又变成 10,5
+	 * */
 	public static int gcd(int p, int q){
 		if (q == 0)
 			return p;
@@ -20,7 +23,7 @@ public class testgcd {
 	public static double H(int N){
 		double sum = 0.0;
 		for(int i=1; i<=N; i++){
-			sum += 1.0/i;// 留意1.0，如果是1/i就有问题了
+			sum += 1.0/i;// 鐣欐剰1.0锛屽鏋滄槸1/i灏辨湁闂浜�
 		}
 		return sum;
 	}
@@ -84,7 +87,7 @@ public class testgcd {
 		/*copy array*/
 		if(false){
 			int len = a.length;
-			int[] b = new int[len];// 动态分配，不必考虑数组的大小要明确
+			int[] b = new int[len];// 鍔ㄦ�鍒嗛厤锛屼笉蹇呰�铏戞暟缁勭殑澶у皬瑕佹槑纭�
 			for(int i=0; i<len; i++){
 				b[i] = a[i];
 			}
@@ -106,13 +109,13 @@ public class testgcd {
 			}			
 			
 		}
-		/*matrix product 矩阵乘积*/
+		/*matrix product 鐭╅樀涔樼Н*/
 		if(false){
 			int N = 3;
 			int[][] c = new int[N][N];
 			for(int i=0; i<N; i++){
 				for(int j=0; j<N; j++){
-					//计算c[i][j]的值
+					//璁＄畻c[i][j]鐨勫�
 					for(int k=0; k<N; k++){
 						c[i][j] += a1[i][k]*b1[k][j];
 					}
