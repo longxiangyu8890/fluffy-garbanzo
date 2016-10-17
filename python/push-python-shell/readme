@@ -1,0 +1,13 @@
+一.使用
+	准备：将pushScript.py pushShellV1 拷贝到要进行编译及推入的目录下
+	1.先编译，需要将编译结果写到当前目录下的log文件中，可用如左的方式： mm -j4 > log
+	2.调用pushScript.py 脚本
+		a.命令参数
+		-P 给出android工程的根目录
+		示例：
+		python pushScript.py -p ~/workspace/sprdroid6.0_trunk/
+
+二.基本过程
+	1.从log获取编译出的lib文件或者bin文件
+	2.将这些文件路径写到相应的中转文件，例如lib路径写到lib_paths_file
+	3.调用pushShellV1 shell脚本，从lib_paths_file读取文件，并推入手机中。

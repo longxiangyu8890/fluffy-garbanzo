@@ -1,0 +1,29 @@
+#! /bin/bash
+a="----this is a push shell-----"
+echo $a;
+
+#----1.get project root path----------------------
+project_rootpath=$1
+if [ ! $project_rootpath ]; then  
+  echo "project_rootpath is NULL,please tell me project root path"
+  exit 0
+else  
+  echo "project_rootpath: ${project_rootpath}"
+fi
+#--------------------------
+
+
+
+#-----2.do the real push job--------------
+adb root
+adb remount
+
+for libpath in $(cat lib_paths_file)
+do
+  echo "we want push ${project_rootpath}${libpath} to system/lib"
+  adb push ${project_rootpath}/${libpath} /system/lib/
+done
+adb reboot
+echo "-----------push done----------"
+
+echo "exit status $?"
